@@ -1,10 +1,9 @@
 
 <script>
 	import Button from "./button.svelte"
+   
 </script>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <nav class="nav">
     <div class="nav-link">
@@ -56,8 +55,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding-left: 50px;
-        width: 100px;
+        padding-left: 0px;
+        width: 50px;
         height: 100%;
         background-color: #D7BBF5;
         display: flex;
@@ -93,20 +92,64 @@
         position: absolute;
         top: 0;
         left: 50px;
-        margin-left: 150px;
-        width: 600px;
+        margin-left: 50px;
+        width: 900px;
         height: 100%;
-        background-color: blue;
+        background-color: #D4E2D4;
     }
 
     .search {
         position: absolute;
         top: 0;
         left: 50px;
-        margin-left: 750px;
+        margin-left: 1000px;
         width: 300px;
         height: 100%;
-        background-color: pink;
+        background-color: #FFCEFE;
+    }
+    .home-title {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .post-box {
+        display: inline-block;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 500px;
+        height: 100px;
+        border-radius: 15px;
+    }
+
+    .post-button {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+    }
+
+
+
+
+    .search-title {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .search-bar {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 200px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 1px 1px black;
     }
 
 </style>

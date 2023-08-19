@@ -1,2 +1,2 @@
-<h1>Notifications page</h1>
+<h1>Profile page</h1>
 <p> </p>

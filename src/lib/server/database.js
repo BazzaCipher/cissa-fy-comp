@@ -135,5 +135,4 @@ function getRecommendedPost(_) {
 }
 
 export async function searchForUsers(userID) {
-    let foundUsers = 
 }
