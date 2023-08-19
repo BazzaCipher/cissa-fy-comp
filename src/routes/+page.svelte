@@ -1,9 +1,9 @@
-
 <script>
 	import Button from "./button.svelte"
    
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <nav class="nav">
     <div class="nav-link">
@@ -69,25 +69,6 @@
         position: relative;
     }
 
-    .nav-hover {
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100%;
-        background-color: #D7BBF5;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .navlink:hover {
-        background-color: light-grey;
-    }
-
     .home-page {
         position: absolute;
         top: 0;
@@ -106,50 +87,6 @@
         width: 300px;
         height: 100%;
         background-color: #FFCEFE;
-    }
-    .home-title {
-        position: relative;
-        margin: 0;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    .post-box {
-        display: inline-block;
-        position: relative;
-        margin-top: 20px;
-        margin-left: 20px;
-        width: 500px;
-        height: 100px;
-        border-radius: 15px;
-    }
-
-    .post-button {
-        display: inline-block;
-        position: relative;
-        margin: 0;
-    }
-
-
-
-
-    .search-title {
-        position: relative;
-        margin: 0;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    .search-bar {
-        position: relative;
-        margin: 0;
-        margin-top: 10px;
-        margin-left: 10px;
-        width: 200px;
-        height: 30px;
-        border: 1px solid black;
-        border-radius: 10px;
-        box-shadow: 1px 1px black;
     }
 
 </style>
