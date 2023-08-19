@@ -1,70 +1,129 @@
 <script>
-    import Button from "./button.svelte"
+    import Button from "../button.svelte"
 
+    const postData = {
+        user: 'itsme',
+        date: '12/3/24',
+        text: 'do i need text here',
+    }
 
+    const showPost = () => {
+        console.log('hi')
+    }
+
+    let profilePicture;
+    let username = '@' + 'username';
+    let tweetContent = 'Mauris nibh arcu, ornare eget imperdiet auctor, convallis ut eros. Donec vitae massa ut velit iaculis malesuada. Proin non efficitur lacus. Phasellus vitae turpis urna. Curabitur vitae erat erat. Duis fermentum nulla id interdum viverra'
     let likes = 45;
-    let retweets = 100;
     let comments = 5;
+    let retweets = 100;
 
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<nav class="nav">
-    <div class="nav-link">
-        <Button class="primary sm" >
-            <a href="./home/home-page.svelte">Home</a>
+<div class="home-page">
+    <nav class="nav">
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/home">Home</a>
+            </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                Search
+            </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/notifications">Notifications</a>
+            </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/messages">Messages</a>
+            </Button>
+        </div>
+        <div class="nav-link"><Button class="primary sm" >
+            <a href="/profile">Profile</a>
         </Button>
-    </div>
-    <div class="nav-link">
-        <Button class="primary sm" >
-            Search
-        </Button>
-    </div>
-    <div class="nav-link">
-        <Button class="primary sm" >
-            <a href="/notifications">Notifications</a>
-        </Button>
-    </div>
-    <div class="nav-link">
-        <Button class="primary sm" >
-            <a href="/messages">Messages</a>
-        </Button>
-    </div>
-    <div class="nav-link"><Button class="primary sm" >
-        <a href="/profile">Profile</a>
-    </Button>
-    </div>
-    <div class="nav-link">
-        <Button class="primary sm" >
-            <a href="/settings">Settings</a>
-        </Button>
-    </div>
-</nav>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/settings">Settings</a>
+            </Button>
+        </div>
+    </nav>
 
-    <section class="home-page">
+    <section class="home-section">
 
         <h1 class="home-title">Home Page</h1>
         
-        <input type="text" class="post-box" placeholder="Type something here">
-        <button class="post-button">POST</button>
+        <div class="new-post">
+            <input type="text" class="post-text" placeholder="Type something here">
+            <button class="post-button">POST</button>
+        </div>
 
         <article class="tweet">
             
             <div class="tweet-head">
-                <div class="profile-pic">
+                <div class="tweet-pic">
 
                 </div>
             
                 <div class="tweet-user">
-                username
+                {username}
                 </div>
             </div>
 
             <div class="tweet-mid">
-                <div class="tweet-box">
-                    hello
+                <div class="tweet-content">
+                    {tweetContent}
+                </div>
+            </div>
+
+            <div class="tweet-end">
+                
+                <div class="tweet-icon">
+                
+                </div>
+                <div class="tweet-num">
+                    {likes}
+                </div>
+                
+                <div class="tweet-icon">
+                
+                </div>
+                <div class="tweet-num">
+                    {comments}
+                </div>
+
+                <div class="tweet-icon">
+                
+                </div>
+                <div class="tweet-num">
+                    {retweets}
+                </div>
+            </div>
+
+        </article>
+
+        <article class="tweet">
+            
+            <div class="tweet-head">
+                <div class="tweet-pic">
+
+                </div>
+            
+                <div class="tweet-user">
+                {username}
+                </div>
+            </div>
+
+            <div class="tweet-mid">
+                <div class="tweet-content">
+                    {tweetContent}
                 </div>
             </div>
 
@@ -94,16 +153,22 @@
 
         </article>
         
-    
     </section>
+
+    
 
 <section class="search">
         <h1 class="search-title">Search</h1>
         <input type="search" class="search-bar">
         <button class="search-button">Search</button>
 </section>
+</div>
 
 <style>
+
+    .home-page {
+        background-color: green;
+    }
     
     a {
         text-decoration: none;
@@ -129,16 +194,24 @@
         position: relative;
     }
 
-    .home-page {
+    .home-section {
         position: absolute;
         top: 0;
         left: 0;
         margin-left: 200px;
-        width: 900px;
-        height: 100%;
-        border-left: 5px solid black;
-        border-right: 2px solid black;
+        margin-bottom: 20px;
+        width: 600px;
+        border-left: 1.5px solid #a7a8a4;
+        border-right: 1.5px solid #a7a8a4;
+        background-color: #faf5fc;
         font-family: 'Roboto', sans-serif;
+    }
+
+    .home-title {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 20px;
     }
 
     .search {
@@ -150,25 +223,22 @@
         height: 100%;
         background-color: #FFCEFE;
     }
-    .home-title {
-        position: relative;
-        margin: 0;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
 
-    .post-box {
-        display: inline-block;
-        position: relative;
+    .new-post {
+        display: block;
+    }
+    
+    .post-text {
         margin-top: 20px;
         margin-left: 20px;
-        width: 500px;
+        width: 545px;
         height: 100px;
-        border-radius: 15px;
-        line-height: 1px;
+        border: 1.5px solid black;
+        border-radius: 10px;
+        box-shadow: 0 2px 1px #ebe7e7;
     }
 
-    .post-box::placeholder {
+    .post-text::placeholder {
         line-height: 90px;
     }
 
@@ -179,16 +249,16 @@
     }
 
 
-
     .tweet {
-        position: absolute;
         margin-top: 15px;
         margin-bottom: 10px;
-        margin-left: 25px;
-        width: 500px;
-        height: 225px;
-        border: 1px solid black;
+        margin-left: 20px;
+        width: 550px;
+        height: 210px;
+        border: 1.5px solid #a7a8a4;
         border-radius: 5px;
+        box-shadow: 0 2px 1px #ebe7e7;
+        background-color: white;
     }
 
     .tweet-head {
@@ -198,7 +268,7 @@
         height: 50px;
     }
 
-    .profile-pic {
+    .tweet-pic {
         position: relative;
         background-color: green;
         margin-top: 10px;
@@ -212,32 +282,33 @@
         position: relative;
         padding-top: 20px;
         margin-left: 10px;
-
+        color: #403938;
     }
 
     .tweet-mid {
         margin-top: 50px;
         position: absolute;
         display: block;
-        width: 500px;
-        border-bottom: 1px solid black;
+        width: 550px;
+        border-bottom: 1px solid #a7a8a4;
     }
 
-    .tweet-box {
+    .tweet-content {
         position: relative;
         margin-top: 10px;
         margin-bottom: 5px;
-        margin-left: 10px;
+        margin-left: 12px;
         margin-right: 15px;
-        width: 480px;
+        width: 500px;
         height: 100px;
+        color: #403938;
     }
 
     .tweet-end {
         position: absolute;
         display: flex;
         margin-top: 170px;
-        padding-left: 5px;
+        padding-left: 10px;
     }
 
     .tweet-icon {
@@ -245,35 +316,27 @@
         background-color: yellow;
         width: 30px;
         height: 30px;
-        margin: 10px 5px;
+        margin-top: 2.5px;
     }
 
     .tweet-num {
         position: relative;
         width: 30px;
-        height: 30px;
+        height: 25px;
         margin-right: 10px;
         margin-top: 5px;
-        padding-top: 10px;
+        padding-top: 3px;
         text-align: center;
-    }
-
-    .tweet-comments {
-        background-color: grey;
-    }
-
-    .tweet-retweets {
-        background-color: grey;
+        font-size: 14px;
+        color: #403938;
     }
 
 
     .search {
-        position: absolute;
         top: 0;
         margin-left: 850px;
         width: 300px;
-        height: 100%;
-        background-color: light-grey;
+        background-color: #faf5fc;
     }
 
 
