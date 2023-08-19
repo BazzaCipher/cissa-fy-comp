@@ -1,14 +1,46 @@
+
+<script>
+	import Button from "./button.svelte"
+</script>
+
+
+
+
+
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <body>
     <nav class="nav">
-        <div class="nav-link">home</div>
-        <div class="nav-link">search</div>
-        <div class="nav-link">notifications</div>
-        <div class="nav-link">messages</div>
-        <div class="nav-link">profile</div>
-        <div class="nav-link">house</div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/">Home</a>
+            </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                Search
+            </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/notifications">Notifications</a>
+            </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/messages">Messages</a>
+            </Button>
+        </div>
+        <div class="nav-link"><Button class="primary sm" >
+            <a href="/profile">Profile</a>
+        </Button>
+        </div>
+        <div class="nav-link">
+            <Button class="primary sm" >
+                <a href="/settings">Settings</a>
+            </Button>
+        </div>
     </nav>
 
     <section class="home-page">
@@ -21,6 +53,10 @@
 </body>
 
 <style>
+    a {
+        text-decoration: none;
+
+    }
     
     .nav {
         position: fixed;
