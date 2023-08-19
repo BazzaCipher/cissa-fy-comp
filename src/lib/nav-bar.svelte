@@ -1,5 +1,29 @@
+
+    <nav class="nav">
+        <div class="nav-link">home</div>
+        <div class="nav-link">search</div>
+        <div class="nav-link">notifications</div>
+        <div class="nav-link">messages</div>
+        <div class="nav-link">profile</div>
+        <div class="nav-link">house</div>
+    </nav>
+
+    <section class="home-page">
+        <h1>FEED</h1>
+    </section>
+
+    <section class="search">
+    <h1>SEARCH</h1>
+    </section>
+
 <style>
-    body {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-left: 50px;
+        width: 100px;
+        height: 100%;
         background-color: #D7BBF5;
         display: flex;
         flex-direction: column;
@@ -28,10 +52,6 @@
         color: white;
         padding-top: 30px;
         padding-bottom: 30px;
-    }
-
-    .navlink:hover {
-        background-color: light-grey;
     }
 
     .home-page {
