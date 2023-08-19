@@ -21,14 +21,17 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
+		"firebase": "^10.2.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2",
-		"vitest": "^0.32.2",
-		"firebase": "^10.2.0"
+		"vitest": "^0.32.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"chatgpt": "^5.2.5"
+	}
 }

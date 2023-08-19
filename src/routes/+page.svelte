@@ -6,47 +6,45 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
-<body>
-    <nav class="nav">
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/">Home</a>
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                Search
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/notifications">Notifications</a>
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/messages">Messages</a>
-            </Button>
-        </div>
-        <div class="nav-link"><Button class="primary sm" >
-            <a href="/profile">Profile</a>
+<nav class="nav">
+    <div class="nav-link">
+        <Button class="primary sm" >
+            <a href="/">Home</a>
         </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/settings">Settings</a>
-            </Button>
-        </div>
-    </nav>
+    </div>
+    <div class="nav-link">
+        <Button class="primary sm" >
+            Search
+        </Button>
+    </div>
+    <div class="nav-link">
+        <Button class="primary sm" >
+            <a href="/notifications">Notifications</a>
+        </Button>
+    </div>
+    <div class="nav-link">
+        <Button class="primary sm" >
+            <a href="/messages">Messages</a>
+        </Button>
+    </div>
+    <div class="nav-link"><Button class="primary sm" >
+        <a href="/profile">Profile</a>
+    </Button>
+    </div>
+    <div class="nav-link">
+        <Button class="primary sm" >
+            <a href="/settings">Settings</a>
+        </Button>
+    </div>
+</nav>
 
-    <section class="home-page">
-        <h1>FEED</h1>
-    </section>
+<section class="home-page">
+    <h1>FEED</h1>
+</section>
 
-    <section class="search">
-        <h1>SEARCH</h1>
-    </section>
-</body>
+<section class="search">
+    <h1>SEARCH</h1>
+</section>
 
 <style>
     a {
