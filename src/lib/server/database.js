@@ -66,3 +66,13 @@ export async function addFriend(userID, friendID) {
 
     updateDoc(userDoc, { friends: arrayUnion(friendID)})
 }
+
+/**
+ * @param {string} userID
+ */
+export async function getUserPosts(userID) {
+    const maybePosts = query(collection(db, "posts"), where("user-created", "==", userID))
+    const posts = await getDocs(maybePosts);
+    // Note that there may be zero documents returned
+    return posts;
+}
