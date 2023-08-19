@@ -2,21 +2,16 @@
     import Button from "../button.svelte"
 
     const postData = {
-        user: 'itsme',
-        date: '12/3/24',
-        text: 'do i need text here',
+        user: '@' + 'username',
+        content: 'Mauris nibh arcu, ornare eget imperdiet auctor, convallis ut eros. Donec vitae massa ut velit iaculis malesuada. Proin non efficitur lacus. Phasellus vitae turpis urna. Curabitur vitae erat erat. Duis fermentum nulla id interdum viverra',
+        likes: 45,
+        comments: 5,
+        retweets: 100
     }
 
-    const showPost = () => {
-        console.log('hi')
+    const trendingData = {
+        topic: '#' + 'Elon Musk'
     }
-
-    let profilePicture;
-    let username = '@' + 'username';
-    let tweetContent = 'Mauris nibh arcu, ornare eget imperdiet auctor, convallis ut eros. Donec vitae massa ut velit iaculis malesuada. Proin non efficitur lacus. Phasellus vitae turpis urna. Curabitur vitae erat erat. Duis fermentum nulla id interdum viverra'
-    let likes = 45;
-    let comments = 5;
-    let retweets = 100;
 
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <div class="home-page">
+    
     <nav class="nav">
         <div class="nav-link">
             <Button class="primary sm" >
@@ -73,13 +69,13 @@
                 </div>
             
                 <div class="tweet-user">
-                {username}
+                {postData.user}
                 </div>
             </div>
 
             <div class="tweet-mid">
                 <div class="tweet-content">
-                    {tweetContent}
+                    {postData.content}
                 </div>
             </div>
 
@@ -89,21 +85,21 @@
                 
                 </div>
                 <div class="tweet-num">
-                    {likes}
+                    {postData.likes}
                 </div>
                 
                 <div class="tweet-icon">
                 
                 </div>
                 <div class="tweet-num">
-                    {comments}
+                    {postData.comments}
                 </div>
 
                 <div class="tweet-icon">
                 
                 </div>
                 <div class="tweet-num">
-                    {retweets}
+                    {postData.retweets}
                 </div>
             </div>
 
@@ -117,13 +113,13 @@
                 </div>
             
                 <div class="tweet-user">
-                {username}
+                {postData.user}
                 </div>
             </div>
 
             <div class="tweet-mid">
                 <div class="tweet-content">
-                    {tweetContent}
+                    {postData.content}
                 </div>
             </div>
 
@@ -133,21 +129,21 @@
                 
                 </div>
                 <div class="tweet-num">
-                    {likes}
+                    {postData.likes}
                 </div>
                 
                 <div class="tweet-icon">
                 
                 </div>
                 <div class="tweet-num">
-                    {comments}
+                    {postData.comments}
                 </div>
 
                 <div class="tweet-icon">
                 
                 </div>
                 <div class="tweet-num">
-                    {retweets}
+                    {postData.retweets}
                 </div>
             </div>
 
@@ -157,18 +153,44 @@
 
     
 
-<section class="search">
+    <div class="explore">
+        
         <h1 class="search-title">Search</h1>
-        <input type="search" class="search-bar">
-        <button class="search-button">Search</button>
-</section>
+        <section class="search">
+
+            <input type="search" class="search-bar" placeholder="What are you looking for?">
+            <button class="search-button"></button>
+        </section>
+
+        
+        <div class="trending">
+            <h1 class="trending-title">Trending</h1>
+            
+            <section class="trending-box">
+                <article class="trending-topic">
+                    {trendingData.topic}
+                </article>
+                <article class="trending-topic">
+                    {trendingData.topic}
+                </article>
+                <article class="trending-topic">
+                    {trendingData.topic}
+                </article>
+                <article class="trending-topic">
+                    {trendingData.topic}
+                </article>
+                <article class="trending-topic">
+                    {trendingData.topic}
+                </article>
+            </section>
+        
+        </div>
+
+    </div>
+
 </div>
 
 <style>
-
-    .home-page {
-        background-color: green;
-    }
     
     a {
         text-decoration: none;
@@ -194,6 +216,8 @@
         position: relative;
     }
 
+
+
     .home-section {
         position: absolute;
         top: 0;
@@ -201,9 +225,7 @@
         margin-left: 200px;
         margin-bottom: 20px;
         width: 600px;
-        border-left: 1.5px solid #a7a8a4;
-        border-right: 1.5px solid #a7a8a4;
-        background-color: #faf5fc;
+        background-color: #fdfbfe;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -214,38 +236,44 @@
         margin-left: 20px;
     }
 
-    .search {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: 2000px;
-        width: 300px;
-        height: 100%;
-        background-color: #FFCEFE;
-    }
-
     .new-post {
         display: block;
+        height: 130px;
     }
     
     .post-text {
+        position: absolute;
         margin-top: 20px;
         margin-left: 20px;
         width: 545px;
         height: 100px;
-        border: 1.5px solid black;
-        border-radius: 10px;
+        border: 1.5px solid #232223;
+        border-radius: 7px;
         box-shadow: 0 2px 1px #ebe7e7;
     }
 
     .post-text::placeholder {
-        line-height: 90px;
+        line-height: 5px;
+        font-size: 14px;
     }
 
     .post-button {
         display: inline-block;
         position: relative;
-        margin: 0;
+        margin-left: 500px;
+        margin-top: 90px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 1px #ebe7e7;
+        background-color: #9946e0;
+        color: white;
+    }
+
+    .post-button:hover {
+        cursor: pointer;
+        background-color: #8f34dd;
+        color: white;
     }
 
 
@@ -302,6 +330,7 @@
         width: 500px;
         height: 100px;
         color: #403938;
+        font-size: 15px;
     }
 
     .tweet-end {
@@ -332,32 +361,100 @@
     }
 
 
-    .search {
+
+    .explore {
+        position: absolute;
         top: 0;
+        left: 0;
         margin-left: 850px;
-        width: 300px;
-        background-color: #faf5fc;
+        width: 350px;
+        font-family: 'Roboto', sans serif;
     }
 
+    .search {
+        position: absolute;
+        display: flex;
+        width: 350px;
+        height: 100px;
+    }
 
     .search-title {
         position: relative;
         margin: 0;
         margin-top: 10px;
         margin-left: 10px;
-        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
     }
 
     .search-bar {
         position: relative;
-        margin: 0;
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 260px;
+        height: 40px;
+        border: 1px solid #232223;
+        border-radius: 5px;
+        box-shadow: 0 2px 1px #ebe7e7;
+    }
+
+    .search-button {
+        margin-top: 15px;
+        margin-left: 5px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 1px #ebe7e7;
+        background-color: #9946e0;
+        
+    }
+
+    .search-button:hover {
+        cursor: pointer;
+        background-color: #8f34dd;
+    }
+
+    .trending-title {
+        position: relative;
         margin-top: 10px;
         margin-left: 10px;
-        width: 200px;
-        height: 30px;
-        border: 2px solid #6528F7;
-        border-radius: 10px;
-        box-shadow: 0 2px 1px rgba(217, 36, 253, 0.5);
+        font-size: 24px;
     }
+    
+    .trending {
+        position: absolute;
+        margin-top: 100px;
+        width: 350px;
+        height: 500px;
+    }
+
+    .trending-box {
+        position: absolute;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        width: 315px;
+        height: 300px;
+        border-radius: 15px;
+        background-color: grey;
+        opacity: 0.25;
+    }
+
+    .trending-topic {
+        position: relative;
+        margin-top: 17px;
+        padding-top: 10px;
+        padding-left: 10px;
+        height: 30px;
+        color: white;
+        opacity: 1;
+    }
+
+    .trending-topic:hover {
+        background-color: grey;
+        opacity: 1;
+
+    }
+
 
 </style>
