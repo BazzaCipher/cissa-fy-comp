@@ -40,11 +40,15 @@
     </nav>
 
     <section class="home-page">
-        <h1>FEED</h1>
+        <h1 class="home-title">Home Page</h1>
+        <input type="text" class="post-box" placeholder="Type something here">
+        <button class="post-button">POST</button>
     </section>
 
     <section class="search">
-        <h1>SEARCH</h1>
+        <h1 class="search-title">Search</h1>
+        <input type="search" class="search-bar">
+        <button class="search-button">Search</button>
     </section>
 </body>
 
@@ -101,14 +105,57 @@
         background-color: blue;
     }
 
+    .home-title {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .post-box {
+        display: inline-block;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 500px;
+        height: 100px;
+        border-radius: 15px;
+    }
+
+    .post-button {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+    }
+
+
     .search {
         position: absolute;
         top: 0;
         left: 50px;
-        margin-left: 750px;
+        margin-left: 800px;
         width: 300px;
         height: 100%;
         background-color: pink;
+    }
+
+    .search-title {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .search-bar {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 200px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 1px 1px black;
     }
 
 </style>
