@@ -1,40 +1,22 @@
 
 <script>
 	import Button from "./button.svelte"
+   
 </script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
+    
     <nav class="nav">
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/">Home</a>
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                Search
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/notifications">Notifications</a>
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/messages">Messages</a>
-            </Button>
-        </div>
-        <div class="nav-link"><Button class="primary sm" >
-            <a href="/profile">Profile</a>
-        </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/settings">Settings</a>
-            </Button>
-        </div>
+        
+    <button class="btn"><a href="/"><i class="fa fa-home"></i></a></button>
+    <button class="btn"><a href="/notifications"><i class="fa fa-bell-o"></i></a></button>
+    <button class="btn"><a href="/profile"><i class="fa fa-user-circle-o"></i></a></button>
+    <button class="btn"><a href="/settings"><i class="fa fa-cog"></i></a></button>
+    <button class="btn"><a href="/messages"><i class="fa fa-comments"></i></a></button>
+    <button class="btn"><i class="fa fa-search"></i></button>
+     
+        
     </nav>
 
     <section class="home-page">
@@ -60,8 +42,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding-left: 50px;
-        width: 100px;
+        padding-left: 0px;
+        width: 50px;
         height: 100%;
         background-color: #D7BBF5;
         display: flex;
@@ -97,12 +79,21 @@
         position: absolute;
         top: 0;
         left: 50px;
-        margin-left: 150px;
-        width: 600px;
+        margin-left: 50px;
+        width: 900px;
         height: 100%;
-        background-color: blue;
+        background-color: #D4E2D4;
     }
 
+    .search {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        margin-left: 1000px;
+        width: 300px;
+        height: 100%;
+        background-color: #FFCEFE;
+    }
     .home-title {
         position: relative;
         margin: 0;
@@ -127,15 +118,7 @@
     }
 
 
-    .search {
-        position: absolute;
-        top: 0;
-        left: 50px;
-        margin-left: 800px;
-        width: 300px;
-        height: 100%;
-        background-color: pink;
-    }
+
 
     .search-title {
         position: relative;
