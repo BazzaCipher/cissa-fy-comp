@@ -64,6 +64,7 @@
         margin-top: 10px;
         margin-left: 15px;
         font-size: 24px;
+        color: #47464a;
     }
     .search-bar {
         position: relative;
@@ -71,7 +72,7 @@
         margin-left: 15px;
         width: 260px;
         height: 40px;
-        border: 1px solid #232223;
+        border: 1.2px solid #a7a8a4;
         border-radius: 5px;
         box-shadow: 0 2px 1px #ebe7e7;
     }
@@ -95,6 +96,7 @@
         margin-top: 10px;
         margin-left: 15px;
         font-size: 24px;
+        color: #47464a;
     }
     
     .trending {
@@ -112,7 +114,7 @@
         height: 300px;
         border-radius: 15px;
         background-color: grey;
-        opacity: 0.25;
+        opacity: 0.35;
     }
     .trending-topic {
         position: relative;
@@ -120,11 +122,11 @@
         padding-top: 10px;
         padding-left: 10px;
         height: 30px;
-        color: white;
+        color: white;;
         opacity: 1;
     }
     .trending-topic:hover {
-        background-color: #60595d;
+        background-color: #47464a;
         opacity: 1;
         cursor: pointer;
     }

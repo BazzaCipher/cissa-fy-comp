@@ -25,7 +25,7 @@
         top: 0;
         left: 0;
         margin-left: 200px;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
         width: 600px;
         background-color: #fdfbfe;
         font-family: 'Roboto', sans-serif;
@@ -36,6 +36,7 @@
         margin: 0;
         margin-top: 20px;
         margin-left: 20px;
+        color: #47464a;
     }
 
     .new-post {
@@ -49,7 +50,7 @@
         margin-left: 20px;
         width: 545px;
         height: 100px;
-        border: 1.5px solid #232223;
+        border: 1.5px solid #a7a8a4;
         border-radius: 7px;
         box-shadow: 0 2px 1px #ebe7e7;
     }

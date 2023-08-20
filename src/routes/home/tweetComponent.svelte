@@ -82,7 +82,7 @@
         position: relative;
         padding-top: 20px;
         margin-left: 10px;
-        color: #403938;
+        color: #47464a;
     }
 
     .tweet-mid {
@@ -101,7 +101,7 @@
         margin-right: 15px;
         width: 500px;
         height: 100px;
-        color: #403938;
+        color: #47464a;
         font-size: 15px;
     }
 
@@ -133,6 +133,6 @@
         padding-top: 3px;
         text-align: center;
         font-size: 14px;
-        color: #403938;
+        color: #47464a;
     }
 </style>

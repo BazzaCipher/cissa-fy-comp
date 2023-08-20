@@ -42,7 +42,7 @@
         height: 380px;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 0 1px 1px grey;
+        box-shadow: 0 1.5px 1px #73736c;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -76,12 +76,18 @@
     .login-button {
         margin-top: 20px;
         margin-left: 157px;
-        background-color: purple;
+        background-color: #9946e0;
         width: 80px;
         height: 35px;
         border: none;
         border-radius: 5px;
         color: white;
+        box-shadow: 0 2px 1px #ebe7e7;
+    }
+
+    .login-button:hover {
+        background-color: #8f34dd;
+        cursor: pointer;
     }
 
 </style>

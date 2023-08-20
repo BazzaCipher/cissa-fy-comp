@@ -1,10 +1,10 @@
 <script>
     import NavBar from "../navBar.svelte"
-    import HomePage from "./home.svelte"
+    import HomePage from "./homePage.svelte"
     import LoggedOutPage from "./loggedOutPage.svelte"
     import ExplorePage from "./explorePage.svelte"
 
-    const loggedOut = true;
+    const loggedOut = false;
 
 </script>
 
