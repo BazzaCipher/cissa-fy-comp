@@ -8,7 +8,7 @@
 
     <nav class="nav">
 
-        <button class="btn"><a href="/"><i class="fa fa-home"></i></a></button>
+        <button class="btn"><a href="/home"><i class="fa fa-home"></i></a></button>
         <button class="btn"><a href="/notifications"><i class="fa fa-bell-o"></i></a></button>
         <button class="btn"><a href="/messages"><i class="fa fa-comments"></i></a></button>
         <button class="btn"><i class="fa fa-search"></i></button>
@@ -19,7 +19,7 @@
 
 <style>
     nav {
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         top: 0;
@@ -27,6 +27,7 @@
         width: 150px;
         height: 100%;
         background-color: #D7BBF5;
+        box-shadow: 1px 0 1px #ebe7e7;
     }
 
     .btn {
