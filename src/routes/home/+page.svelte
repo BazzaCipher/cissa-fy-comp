@@ -1,13 +1,11 @@
 <script>
     import NavBar from "../navBar.svelte"
     import HomePage from "./home.svelte"
+    import LoggedOutPage from "./loggedOutPage.svelte"
     import ExplorePage from "./explorePage.svelte"
 
-    import TweetData from "./tweetData.svelte"
+    const loggedOut = true;
 
-    const trendingData = {
-        topic: '#' + 'Elon Musk'
-    }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,5 +18,9 @@
     <NavBar />
     <HomePage />
     <ExplorePage/>
+
+    {#if loggedOut}
+        <LoggedOutPage />
+    {/if}
     
 </div>

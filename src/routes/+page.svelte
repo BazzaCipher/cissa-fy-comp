@@ -8,7 +8,7 @@
 <nav class="nav">
     <div class="nav-link">
         <Button class="primary sm" >
-            <a href="/home">Home</a>
+            <a href="/homeLoggedOut">Home</a>
         </Button>
     </div>
     <div class="nav-link">
