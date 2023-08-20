@@ -1,58 +1,25 @@
 <script>
-    import Button from "../button.svelte"
+    import NavBar from "./navBar.svelte"
+    import HomePage from "./home.svelte"
+    import ExplorePage from "./explorePage.svelte"
 
-    const postData = {
-        user: '@' + 'username',
-        content: 'Mauris nibh arcu, ornare eget imperdiet auctor, convallis ut eros. Donec vitae massa ut velit iaculis malesuada. Proin non efficitur lacus. Phasellus vitae turpis urna. Curabitur vitae erat erat. Duis fermentum nulla id interdum viverra',
-        likes: 45,
-        comments: 5,
-        retweets: 100
-    }
+    import TweetData from "./tweetData.svelte"
 
     const trendingData = {
         topic: '#' + 'Elon Musk'
     }
-
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<div class="home-page">
-    
-    <nav class="nav">
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/home">Home</a>
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                Search
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/notifications">Notifications</a>
-            </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/messages">Messages</a>
-            </Button>
-        </div>
-        <div class="nav-link"><Button class="primary sm" >
-            <a href="/profile">Profile</a>
-        </Button>
-        </div>
-        <div class="nav-link">
-            <Button class="primary sm" >
-                <a href="/settings">Settings</a>
-            </Button>
-        </div>
-    </nav>
 
-    <section class="home-section">
+<div class="home-page">
+
+    <NavBar />
+    
+    <!-- <section class="home-section">
 
         <h1 class="home-title">Home Page</h1>
         
@@ -61,163 +28,60 @@
             <button class="post-button">POST</button>
         </div>
 
-        <article class="tweet">
+        <TweetData>
+            <article slot="tweet" let:user let:content let:likes let:comments let:retweets class="tweet">
             
-            <div class="tweet-head">
-                <div class="tweet-pic">
+                <div class="tweet-head">
+                    <div class="tweet-pic">
 
-                </div>
-            
-                <div class="tweet-user">
-                {postData.user}
-                </div>
-            </div>
-
-            <div class="tweet-mid">
-                <div class="tweet-content">
-                    {postData.content}
-                </div>
-            </div>
-
-            <div class="tweet-end">
+                    </div>
                 
-                <div class="tweet-icon">
-                
-                </div>
-                <div class="tweet-num">
-                    {postData.likes}
-                </div>
-                
-                <div class="tweet-icon">
-                
-                </div>
-                <div class="tweet-num">
-                    {postData.comments}
+                    <div class="tweet-user">
+                    {user}
+                    </div>
                 </div>
 
-                <div class="tweet-icon">
-                
-                </div>
-                <div class="tweet-num">
-                    {postData.retweets}
-                </div>
-            </div>
-
-        </article>
-
-        <article class="tweet">
-            
-            <div class="tweet-head">
-                <div class="tweet-pic">
-
-                </div>
-            
-                <div class="tweet-user">
-                {postData.user}
-                </div>
-            </div>
-
-            <div class="tweet-mid">
-                <div class="tweet-content">
-                    {postData.content}
-                </div>
-            </div>
-
-            <div class="tweet-end">
-                
-                <div class="tweet-icon">
-                
-                </div>
-                <div class="tweet-num">
-                    {postData.likes}
-                </div>
-                
-                <div class="tweet-icon">
-                
-                </div>
-                <div class="tweet-num">
-                    {postData.comments}
+                <div class="tweet-mid">
+                    <div class="tweet-content">
+                        {content}
+                    </div>
                 </div>
 
-                <div class="tweet-icon">
-                
-                </div>
-                <div class="tweet-num">
-                    {postData.retweets}
-                </div>
-            </div>
+                <div class="tweet-end">
+                    
+                    <div class="tweet-icon">
+                    
+                    </div>
+                    <div class="tweet-num">
+                        {likes}
+                    </div>
+                    
+                    <div class="tweet-icon">
+                    
+                    </div>
+                    <div class="tweet-num">
+                        {comments}
+                    </div>
 
-        </article>
+                    <div class="tweet-icon">
+                    
+                    </div>
+                    <div class="tweet-num">
+                        {retweets}
+                    </div>
+                </div>
+
+            </article>
+        </TweetData>
         
-    </section>
+    </section> -->
 
+    <HomePage />
+    <ExplorePage/>
     
-
-    <div class="explore">
-        
-        <h1 class="search-title">Search</h1>
-        <section class="search">
-
-            <input type="search" class="search-bar" placeholder="What are you looking for?">
-            <button class="search-button"></button>
-        </section>
-
-        
-        <div class="trending">
-            <h1 class="trending-title">Trending</h1>
-            
-            <section class="trending-box">
-                <article class="trending-topic">
-                    {trendingData.topic}
-                </article>
-                <article class="trending-topic">
-                    {trendingData.topic}
-                </article>
-                <article class="trending-topic">
-                    {trendingData.topic}
-                </article>
-                <article class="trending-topic">
-                    {trendingData.topic}
-                </article>
-                <article class="trending-topic">
-                    {trendingData.topic}
-                </article>
-            </section>
-        
-        </div>
-
-    </div>
-
 </div>
 
 <style>
-    
-    a {
-        text-decoration: none;
-
-    }
-    
-    .nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding-left: 0px;
-        width: 150px;
-        height: 100%;
-        background-color: #D7BBF5;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-link {
-        position: relative;
-    }
-
-
-
     .home-section {
         position: absolute;
         top: 0;
@@ -348,6 +212,10 @@
         margin-top: 2.5px;
     }
 
+    .tweet-icon:hover {
+        cursor: pointer;
+    }
+
     .tweet-num {
         position: relative;
         width: 30px;
@@ -359,7 +227,6 @@
         font-size: 14px;
         color: #403938;
     }
-
 
 
     .explore {
@@ -451,9 +318,9 @@
     }
 
     .trending-topic:hover {
-        background-color: grey;
+        background-color: #60595d;
         opacity: 1;
-
+        cursor: pointer;
     }
 
 
