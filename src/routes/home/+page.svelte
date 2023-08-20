@@ -1,5 +1,5 @@
 <script>
-    import NavBar from "./navBar.svelte"
+    import NavBar from "../navBar.svelte"
     import HomePage from "./home.svelte"
     import ExplorePage from "./explorePage.svelte"
 
@@ -18,64 +18,6 @@
 <div class="home-page">
 
     <NavBar />
-    
-    <!-- <section class="home-section">
-
-        <h1 class="home-title">Home Page</h1>
-        
-        <div class="new-post">
-            <input type="text" class="post-text" placeholder="Type something here">
-            <button class="post-button">POST</button>
-        </div>
-
-        <TweetData>
-            <article slot="tweet" let:user let:content let:likes let:comments let:retweets class="tweet">
-            
-                <div class="tweet-head">
-                    <div class="tweet-pic">
-
-                    </div>
-                
-                    <div class="tweet-user">
-                    {user}
-                    </div>
-                </div>
-
-                <div class="tweet-mid">
-                    <div class="tweet-content">
-                        {content}
-                    </div>
-                </div>
-
-                <div class="tweet-end">
-                    
-                    <div class="tweet-icon">
-                    
-                    </div>
-                    <div class="tweet-num">
-                        {likes}
-                    </div>
-                    
-                    <div class="tweet-icon">
-                    
-                    </div>
-                    <div class="tweet-num">
-                        {comments}
-                    </div>
-
-                    <div class="tweet-icon">
-                    
-                    </div>
-                    <div class="tweet-num">
-                        {retweets}
-                    </div>
-                </div>
-
-            </article>
-        </TweetData>
-        
-    </section> -->
-
     <HomePage />
     <ExplorePage/>
     

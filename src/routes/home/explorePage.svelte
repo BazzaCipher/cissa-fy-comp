@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <div class="explore">
-        
+
         <h1 class="search-title">Search</h1>
         <section class="search">
 
@@ -17,10 +17,10 @@
             <button class="search-button"></button>
         </section>
 
-        
+
         <div class="trending">
             <h1 class="trending-title">Trending</h1>
-            
+
             <section class="trending-box">
                 <article class="trending-topic">
                     {trendingData.topic}
@@ -38,7 +38,7 @@
                     {trendingData.topic}
                 </article>
             </section>
-        
+
         </div>
     </div>
 
@@ -52,22 +52,19 @@
         width: 350px;
         font-family: 'Roboto', sans serif;
     }
-
     .search {
         position: absolute;
         display: flex;
         width: 350px;
         height: 100px;
     }
-
     .search-title {
         position: relative;
         margin: 0;
         margin-top: 10px;
-        margin-left: 10px;
+        margin-left: 15px;
         font-size: 24px;
     }
-
     .search-bar {
         position: relative;
         margin-top: 15px;
@@ -78,7 +75,6 @@
         border-radius: 5px;
         box-shadow: 0 2px 1px #ebe7e7;
     }
-
     .search-button {
         margin-top: 15px;
         margin-left: 5px;
@@ -90,16 +86,14 @@
         background-color: #9946e0;
         
     }
-
     .search-button:hover {
         cursor: pointer;
         background-color: #8f34dd;
     }
-
     .trending-title {
         position: relative;
         margin-top: 10px;
-        margin-left: 10px;
+        margin-left: 15px;
         font-size: 24px;
     }
     
@@ -109,7 +103,6 @@
         width: 350px;
         height: 500px;
     }
-
     .trending-box {
         position: absolute;
         margin-top: 5px;
@@ -121,7 +114,6 @@
         background-color: grey;
         opacity: 0.25;
     }
-
     .trending-topic {
         position: relative;
         margin-top: 17px;
@@ -131,12 +123,9 @@
         color: white;
         opacity: 1;
     }
-
     .trending-topic:hover {
         background-color: #60595d;
         opacity: 1;
         cursor: pointer;
     }
-
-
 </style>

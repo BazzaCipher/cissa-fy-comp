@@ -34,7 +34,7 @@
     .home-title {
         position: relative;
         margin: 0;
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 20px;
     }
 
