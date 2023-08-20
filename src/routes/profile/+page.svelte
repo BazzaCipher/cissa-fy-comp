@@ -1,8 +1,9 @@
 <script>
     import NavBar from "../navBar.svelte"
+    import HomePage from "./homePage.svelte"
+    import ExplorePage from "../explorePage.svelte"
 </script>
 
 <NavBar />
-
-<h1>Profile page</h1>
-<p> </p>
+<HomePage/>
+<ExplorePage/>

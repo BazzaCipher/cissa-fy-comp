@@ -1,8 +1,8 @@
 <script>
     import NavBar from "../navBar.svelte"
+    import ExplorePage from "../explorePage.svelte"
 </script>
 
 <NavBar />
+<ExplorePage />
 
-<h1>Notifications page</h1>
-<p> </p>

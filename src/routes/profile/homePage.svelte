@@ -8,13 +8,18 @@
 
     <section class="home-section">
 
-        <h1 class="home-title">Home Page</h1>
+        <h1 class="home-title">Profile</h1>
         
-        <div class="new-post">
-            <input type="text" class="post-text" placeholder="Type something here">
-            <button class="post-button">POST</button>
+        <div class="profile-banner">
+            <div class="profile-pic"></div>
+            <h3>username</h3>
+            <p>Welcome to my page!</p>
+            <p>Followers</p>
+            <p>Following</p>
+
         </div>
 
+        <h3 class="home-title">Posts</h3>
         <TweetComponent />
         
     </section>
@@ -27,6 +32,7 @@
         margin-left: 200px;
         padding-bottom: 20px;
         width: 600px;
+        background-color: #fdfbfe;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -38,7 +44,7 @@
         color: #47464a;
     }
 
-    .new-post {
+    .profile-banner {
         display: block;
         height: 130px;
     }
